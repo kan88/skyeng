@@ -3,7 +3,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-
+const CopyPlugin = require("copy-webpack-plugin");
 const isProduction = process.env.NODE_ENV == "production";
 
 const stylesHandler = MiniCssExtractPlugin.loader;
@@ -21,6 +21,12 @@ const config = {
     new HtmlWebpackPlugin({
       template: "index.html",
     }),
+    new CopyPlugin({
+      patterns: [{
+        from: "src/images",
+        to: "images"
+      }],
+    }),
 
     new MiniCssExtractPlugin(),
 
@@ -28,8 +34,7 @@ const config = {
     // Learn more about plugins from https://webpack.js.org/configuration/plugins/
   ],
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.(js|jsx)$/i,
         loader: "babel-loader",
       },

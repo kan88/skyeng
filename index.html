@@ -51,64 +51,71 @@
                 </ul>
             </div>
             <div class="cart js-nodisplay">
-                <section class="product">
-                    <h2 class="product__headline visually-hidden">Авторская мебель для Вашего дома</h2>
-                    <div class="product__header">
-                        <span class="product__text">Товар</span>
-                        <span class="product__text">К-во</span>
-                    </div>
-                    <ul class="product__list">
-                        <li class="product__item">
-                            <div class="product__content">
-                                <a href="#" class="product__image-link">
-                                    <img src="/src/images/products/menu-s.jpg" alt="Изображение товара" width="173"
-                                        height="173" class="product__image">
-                                </a>
-                                <div class="product__info-wrapper">
-                                    <h3 class="product__title"></h3>
-                                    <p class="product__description"></p>
-                                    <span class="product__price"></span>
-                                    <div class="product__links-wrapper">
-                                        <button href="#" class="product__link-fav">Избранные</button>
-                                        <button class="product__link--del">Удалить</button>
+                <div class="cart__wrapper">
+                    <section class="product">
+                        <h2 class="product__headline visually-hidden">Авторская мебель для Вашего дома</h2>
+                        <div class="product__header">
+                            <span class="product__text">Товар</span>
+                            <span class="product__text">К-во</span>
+                        </div>
+                        <ul class="product__list">
+                            <li class="product__item">
+                                <div class="product__content">
+                                    <a href="#" class="product__image-link">
+                                        <img src="images/products/menu-s.jpg" alt="Изображение товара" width="173"
+                                            height="173" class="product__image">
+                                    </a>
+                                    <div class="product__info-wrapper">
+                                        <h3 class="product__title">стол</h3>
+                                        <p class="product__description">описание</p>
+                                        <span class="product__price">цена</span>
+                                        <div class="product__links-wrapper">
+                                            <button href="#" class="product__link product__link-fav">Избранные</button>
+                                            <button class="product__link product__link--del">Удалить</button>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="product__cart">
-                                <span class="product__quality">1</span>
-                                <div class="product__buttons-wrapper">
-                                    <button class="product__button product__button--add"></button>
-                                    <button class="product__button product__button--remove"></button>
+                                <div class="product__cart">
+                                    <span class="product__quality">1</span>
+                                    <div class="product__buttons-wrapper">
+                                        <button class="product__button product__button--add"></button>
+                                        <button class="product__button product__button--remove"></button>
+                                    </div>
                                 </div>
-                            </div>
-                        </li>
-                    </ul>
-                </section>
-                <sections class="command">
-                    <h2 class="command__headline visually-hidden">Управление Вашим заказом</h2>
-                    <div class="command__buttons-wrapper">
-                        <button class="command__button command__button--clear">Очистить корзину</button>
-                        <button class="command__button command__button--moveon">Продолжить покупки</button>
-                    </div>
-                </sections>
-                <section class="order">
-                    <h2 class="order__headline">Оформление заказа</h2>
-                    <form class="order__form" action="#" method="post" enctype='multipart/form-data'>
-                        <ul class="order__list">
-                            <li class="order__item">
-                                <input type="text" class="order__input" placeholder="Имя Фамилия" name="name">
-                                <input type="text" class="order__input" placeholder="+ 7 904 000 80 80" name="number">
-                                <input type="text" class="order__input" placeholder="Адрес доставки" name="adress">
                             </li>
                         </ul>
-                        <div class="order__cost-wrapper">
-                            <span class="order__cost">Итого:</span>
-                            <span class="order__value">128 000</span>
-                            <span class="order__money">руб.</span>
+                    </section>
+                    <sections class="command">
+                        <h2 class="command__headline visually-hidden">Управление Вашим заказом</h2>
+                        <div class="command__buttons-wrapper">
+                            <button class="command__button command__button--clear">Очистить корзину</button>
+                            <button class="command__button command__button--moveon">Продолжить покупки</button>
                         </div>
-                        <button class="order__submit" type="submit">Оформить заказ</button>
-                    </form>
-                </section>
+                    </sections>
+                    <section class="order">
+                        <h2 class="order__headline">Оформление заказа</h2>
+                        <form class="order__form" action="#" method="post" enctype='multipart/form-data'>
+                            <ul class="order__list">
+                                <li class="order__item">
+                                    <input type="text" class="order__input" placeholder="Имя Фамилия" name="name">
+                                </li>
+                                <li class="order__item">
+                                    <input type="text" class="order__input" placeholder="+ 7 904 000 80 80"
+                                        name="number">
+                                </li>
+                                <li class="order__item">
+                                    <input type="text" class="order__input" placeholder="Адрес доставки" name="adress">
+                                </li>
+                            </ul>
+                            <div class="order__cost-wrapper">
+                                <span class="order__cost">Итого:</span>
+                                <span class="order__value">128 000</span>
+                                <span class="order__money">руб.</span>
+                            </div>
+                            <button class="order__submit" type="submit">Оформить заказ</button>
+                        </form>
+                    </section>
+                </div>
             </div>
         </main>
     </div>
