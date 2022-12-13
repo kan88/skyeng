@@ -1,15 +1,4 @@
-# 🚀 Welcome to your new awesome project!
-
-This project has been created using **webpack-cli**, you can now run
-
-```
-npm run build
-```
-
-or
-
-```
-yarn build
-```
-
-to bundle your application
+проект выполнен по шаблону 
+https://www.figma.com/file/NBdyWNYPzd2cOvWsiNyjSD/Untitled?node-id=133%3A216&t=IqOMhJpXKv8h5Ryr-0
+Запуск npm run serve
+Билд npm run build

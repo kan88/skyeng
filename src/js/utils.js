@@ -189,10 +189,8 @@ const sortingBySelect = (data) => {
         const products = document.querySelectorAll('.catalog__item')
         products.forEach((item) => item.remove())
         if (evt.target.value == 'cheap') {
-            console.log('here')
             renderCatalog(data, true)
         } else {
-            console.log('here2')
             renderCatalog(data, false)
         }
     })
