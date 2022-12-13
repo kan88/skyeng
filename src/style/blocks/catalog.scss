@@ -1,0 +1,144 @@
+.catalog {
+    position: relative;
+    padding-top: 86px;
+}
+
+.catalog__sort-wrapper {
+    position: absolute;
+    top: 20px;
+    right: 0;
+}
+
+.catalog__sort {
+    padding: 10px 75px 10px 14px;
+    border-radius: 20px;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+    cursor: pointer;
+}
+
+.catalog__sort::-ms-expand {
+    display: none;
+}
+
+.catalog__sort-wrapper::before {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 10px;
+    background: url("/src/images/icons/select.svg");
+    background-repeat: no-repeat;
+    top: 15px;
+    right: 15px;
+}
+
+.catalog__list {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    row-gap: 5px;
+    column-gap: 5px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.catalog__item {
+    display: flex;
+    flex-direction: column;
+    max-width: 379px;
+}
+
+.catalog__image-wrapper {
+    position: relative;
+    width: 379px;
+    height: 250px;
+}
+
+.catalog__image {
+    width: 379px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.catalog__icons-wrapper {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.catalog__button {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.catalog__button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+}
+
+.catalog__button--cart::before {
+    background-image: url("/src/images/icons/bag.svg");
+}
+
+.catalog__button--fav::before {
+    background-image: url("/src/images/icons/heart.svg");
+}
+
+.catalog__content-wrapper {
+    text-align: left;
+}
+
+.catalog__title {
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.catalog__description {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+}
+
+.catalog__price-wrapper {
+    font-size: 24px;
+    line-height: 29px;
+}
+
+@media (min-width: $tablet-width) {
+.catalog__list {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    row-gap: 40px;
+    column-gap: 25px;
+}
+}
+
+@media (min-width: $desktop-width) {
+    .catalog {
+        padding-top: 106px;
+    }
+
+    .catalog__list {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        row-gap: 48px;
+        column-gap: 32px;
+    }
+
+    .catalog__sort-wrapper {
+        top: 32px;
+    }
+    }

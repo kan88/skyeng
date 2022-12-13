@@ -1,0 +1,46 @@
+.command__buttons-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 59px;
+}
+
+.command__button {
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 400;
+    width: 163px;
+    padding: 10px 6px;
+    border-radius: 50px;
+    background-color: $primary;
+    color: $secondary;
+    cursor: pointer;
+}
+
+.command__button--moveon {
+    background-color: $secondary;
+    color: $primary;
+}
+
+@media (min-width: $tablet-width) {
+    .command__buttons-wrapper {
+        display: flex;
+        justify-content: start;
+        margin-bottom: 64px;
+    }
+
+    .command__button {
+        font-size: 14px;
+        line-height: 17px;
+        padding: 10px 22px;
+        width: 220px;
+    }
+    .command__button--clear {
+        margin-right: 7px;
+    }
+}
+
+@media (min-width: $desktop-width) {
+    .command {
+        order: 3;
+    }
+}
