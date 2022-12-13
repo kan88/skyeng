@@ -43,10 +43,12 @@
             <h1 class="visually-hidden">Официальный сайт компании Интерьер</h1>
             <div class="catalog js-display">
                 <div class="catalog__sort-wrapper">
-                    <select class="catalog__sort">
-                        <option value="0">Порядок: сперва дешевле</option>
-                        <option value="1">Порядок: сперва дороже</option>
-                    </select>
+                    <form class="catalog__form" action="">
+                        <select class="catalog__sort" name="sorting" id="sorting">
+                            <option value="cheap">Порядок:сперва дешевле</option>
+                            <option value="luxury">Порядок:сперва дороже</option>
+                        </select>
+                    </form>
                 </div>
                 <ul class="catalog__list">
 
@@ -61,30 +63,6 @@
                             <span class="product__text">К-во</span>
                         </div>
                         <ul class="product__list">
-                            <li class="product__item">
-                                <div class="product__content">
-                                    <a href="#" class="product__image-link">
-                                        <img src="images/products/menu-s.jpg" alt="Изображение товара" width="173"
-                                            height="173" class="product__image">
-                                    </a>
-                                    <div class="product__info-wrapper">
-                                        <h3 class="product__title">стол</h3>
-                                        <p class="product__description">описание</p>
-                                        <span class="product__price">цена</span>
-                                        <div class="product__links-wrapper">
-                                            <button href="#" class="product__link product__link-fav">Избранные</button>
-                                            <button class="product__link product__link--del">Удалить</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="product__cart">
-                                    <span class="product__quality">1</span>
-                                    <div class="product__buttons-wrapper">
-                                        <button class="product__button product__button--add"></button>
-                                        <button class="product__button product__button--remove"></button>
-                                    </div>
-                                </div>
-                            </li>
                         </ul>
                     </section>
                     <sections class="command">
@@ -111,7 +89,7 @@
                             </ul>
                             <div class="order__cost-wrapper">
                                 <span class="order__cost">Итого:</span>
-                                <span class="order__value">128 000</span>
+                                <span class="order__value">0</span>
                                 <span class="order__money">руб.</span>
                             </div>
                             <button class="order__submit" type="submit">Оформить заказ</button>
@@ -152,9 +130,11 @@
                     <h3 class="product__title"></h3>
                     <p class="product__description"></p>
                     <span class="product__price"></span>
+                    <span class="product__value">руб.</span>
+
                     <div class="product__links-wrapper">
-                        <button href="#" class="product__link-fav">Избранные</button>
-                        <button class="product__link--del">Удалить</button>
+                        <button href="#" class="product__link product__link-fav">Избранные</button>
+                        <button class="product__link product__link--del">Удалить</button>
                     </div>
                 </div>
             </div>

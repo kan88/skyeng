@@ -3,7 +3,7 @@ const data = [{
     images: ['/images/products/tatran-s.jpg', '/images/products/tatran-m.jpg'],
     title: 'Кровать TATRAN',
     info: 'Основание из полированной нержавеющей стали, придает оригинальный парящий эффект.',
-    price: '120 000',
+    price: 120000,
     min: 1,
     max: 5
 }, {
@@ -11,7 +11,7 @@ const data = [{
     images: ['/images/products/vilora-s.jpg', '/images/products/vilora-m.jpg'],
     title: 'Кресло VILORA',
     info: 'Мягкое и уютное, аккуратное и стильное. Упругие подушки сиденья и приятная на ощупь ткань. ',
-    price: '21 000',
+    price: 21000,
     min: 2,
     max: 8
 }, {
@@ -19,7 +19,7 @@ const data = [{
     images: ['/images/products/menu-s.jpg', '/images/products/menu-m.jpg'],
     title: 'Стол MENU',
     info: 'Европейский дуб - отличается особой прочностью и стабильностью.',
-    price: '34 000',
+    price: 34000,
     min: 1,
     max: 2
 }, {
@@ -27,7 +27,7 @@ const data = [{
     images: ['/images/products/askesta-s.jpg', '/images/products/askesta-m.jpg'],
     title: 'Диван ASKESTA',
     info: 'Благодаря защелкивающемуся механизму диван легко раскладывается в комфортную кровать',
-    price: '68 000',
+    price: 68000,
     min: 1,
     max: 9
 }, {
@@ -35,7 +35,7 @@ const data = [{
     images: ['/images/products/lunar-s.jpg', '/images/products/lunar-m.jpg'],
     title: 'Кресло LUNAR',
     info: 'Прекрасно переносит солнечные лучи, перепады влажности и любые осадки',
-    price: '40 000',
+    price: 40000,
     min: 2,
     max: 6
 }, {
@@ -43,7 +43,7 @@ const data = [{
     images: ['/images/products/nastan-s.jpg', '/images/products/nastan-m.jpg'],
     title: 'Шкаф Nastan',
     info: 'Мебель может быть оснащена разнообразными системами подсветки.',
-    price: '80 000',
+    price: 80000,
     min: 1,
     max: 2
 }, ]
