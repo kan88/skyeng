@@ -41,11 +41,13 @@
         </header>
         <main class="main">
             <h1 class="visually-hidden">Официальный сайт компании Интерьер</h1>
-            <select class="sort">
-                <option value="0">Порядок: сперва дешевле</option>
-                <option value="1">Порядок: сперва дороже</option>
-            </select>
             <div class="catalog js-display">
+                <div class="catalog__sort-wrapper">
+                    <select class="catalog__sort">
+                        <option value="0">Порядок: сперва дешевле</option>
+                        <option value="1">Порядок: сперва дороже</option>
+                    </select>
+                </div>
                 <ul class="catalog__list">
 
                 </ul>
@@ -131,7 +133,11 @@
             <div class="catalog__content-wrapper">
                 <h3 class="catalog__title"></h3>
                 <p class="catalog__description"></p>
-                <p class="catalog__price"></p>
+                <div class="catalog__price-wrapper">
+                    <span class="catalog__price"></span>
+                    <span class="catalog__value">руб</span>
+                </div>
+
             </div>
         </li>
     </template>
