@@ -1,3 +1,5 @@
+import data from "./data";
+
 const nav = document.querySelector('.header__list');
 const catalog = document.querySelector('.catalog');
 const cart = document.querySelector('.cart');
@@ -99,18 +101,23 @@ const addToCart = (data, evt) => {
 
 //отрисовка каталога
 
-const sortingData = (data) => {
+const sortingDataMinMax = (data) => {
     const sorted = (a, b) => {
         return a.price - b.price
     }
     return data.sort(sorted)
 }
-let sortBoolean;
-const renderCatalog = (data, sortBoolean = true) => {
+
+const sortingDataMaxMin = (data) => {
+    const sorted = (a, b) => {
+        return b.price - a.price
+    }
+    return data.sort(sorted)
+}
+const renderCatalog = (data, sortBoolean) => {
     const catalogList = document.querySelector('.catalog__list');
     if (sortBoolean) {
-        const sortedData = sortingData(data)
-        console.log(sortedData)
+        const sortedData = sortingDataMinMax(data)
         sortedData.forEach((item) => {
             const template = document.querySelector('.catalog-template')
                 .content
@@ -129,7 +136,8 @@ const renderCatalog = (data, sortBoolean = true) => {
             catalogList.appendChild(newItem);
         })
     } else {
-        data.forEach((item) => {
+        const sortedData = sortingDataMaxMin(data)
+        sortedData.forEach((item) => {
             const template = document.querySelector('.catalog-template')
                 .content
                 .querySelector('.catalog__item');
@@ -178,28 +186,24 @@ const goCatalog = () => {
 const sortingBySelect = (data) => {
     const select = document.querySelector('.catalog__sort')
     select.addEventListener('change', (evt) => {
-        console.log(evt.target.value)
-        console.log('change')
-        // const products = document.querySelectorAll('.catalog__item');
-        // for (let i = 0; i < products.length; i++) {
-        //     products[i].remove();
-        // }
-        if (evt.target.value = 'cheap') {
-            'сначала дешевле'
-            // renderCatalog(data);
+        const products = document.querySelectorAll('.catalog__item')
+        products.forEach((item) => item.remove())
+        if (evt.target.value == 'cheap') {
+            console.log('here')
+            renderCatalog(data, true)
         } else {
-            'сначала дороже'
-            // renderCatalog(data, false);
+            console.log('here2')
+            renderCatalog(data, false)
         }
-
     })
 }
+
 const start = (data) => {
     onNavigation();
-    renderCatalog(data);
+    renderCatalog(data, true);
     clearCart();
     goCatalog();
-    sortingBySelect(data);
+    sortingBySelect(data, true);
 }
-
+// sorting()
 export default start;
